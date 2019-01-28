@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:complexType name="persona">
+		<xs:sequence>
+			<xs:element name="cognome" type="xs:string"/>
+			<xs:element name="nome" type="xs:string"/>
+			<xs:element name="dataNascita" type="xs:date"/>
+			<xs:element name="luogoNascita" type="xs:string"/>
+		</xs:sequence>
+		
+	</xs:complexType>
+
+	<xs:element name="docente" type="persona"/>
+	<xs:element name="studente" type="persona"/>
+</xs:schema>

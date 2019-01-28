@@ -1,0 +1,100 @@
+<?xml version="1.0" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!--definizione tipo latitudine-->
+   <xs:complexType name="tipo_latitudine">
+       <xs:sequence>
+           <xs:element name="gradi">
+                <xs:simpleType>
+                     <xs:restriction base="xs:integer">
+                           <xs:minInclusive value="0"/>
+                           <xs:maxInclusive value="90"/>
+                      </xs:restriction>
+                 </xs:simpleType>
+           </xs:element>
+           <xs:element name="minuti">
+                <xs:simpleType>
+                     <xs:restriction base="xs:integer">
+                           <xs:minInclusive value="0"/>
+                           <xs:maxInclusive value="60"/>
+                      </xs:restriction>
+                 </xs:simpleType>
+           </xs:element>
+           <xs:element name="secondi">
+                <xs:simpleType>
+                     <xs:restriction base="xs:integer">
+                           <xs:minInclusive value="0"/>
+                           <xs:maxInclusive value="60"/>
+                      </xs:restriction>
+                 </xs:simpleType>
+           </xs:element>
+
+           <xs:element name="orientamento">
+                <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                         <xs:enumeration value="nord"/>
+                         <xs:enumeration value="sud"/>  
+                      </xs:restriction>
+                 </xs:simpleType>
+           </xs:element> 
+       </xs:sequence>
+   </xs:complexType>
+
+<!--definizione tipo longitudine-->
+   <xs:complexType name="tipo_longitudine">
+       <xs:sequence>
+           <xs:element name="gradi">
+                <xs:simpleType>
+                     <xs:restriction base="xs:integer">
+                           <xs:minInclusive value="0"/>
+                           <xs:maxInclusive value="90"/>
+                      </xs:restriction>
+                 </xs:simpleType>
+           </xs:element>
+           <xs:element name="minuti">
+                <xs:simpleType>
+                     <xs:restriction base="xs:integer">
+                           <xs:minInclusive value="0"/>
+                           <xs:maxInclusive value="60"/>
+                      </xs:restriction>
+                 </xs:simpleType>
+           </xs:element>
+           <xs:element name="secondi">
+                <xs:simpleType>
+                     <xs:restriction base="xs:integer">
+                           <xs:minInclusive value="0"/>
+                           <xs:maxInclusive value="60"/>
+                      </xs:restriction>
+                 </xs:simpleType>
+           </xs:element>
+
+           <xs:element name="orientamento">
+                <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                         <xs:enumeration value="est"/>
+                         <xs:enumeration value="ovest"/>  
+                      </xs:restriction>
+                 </xs:simpleType>
+           </xs:element> 
+       </xs:sequence>
+   </xs:complexType>
+
+<!--definizione tipo di dato tipo_posizione-->
+   <xs:complexType name="tipo_posizione">
+         <xs:sequence>
+              <xs:element name="latitudine" type="tipo_latitudine"/>
+              <xs:element name="longitudine" type="tipo_longitudine"/>
+              <xs:element name="dataOra" type="xs:dateTime"/>
+         </xs:sequence>
+   </xs:complexType>
+
+
+<!--definizione dell'elemento percorso-->
+   <xs:element name="percorso">
+         <xs:complexType>
+             <xs:sequence>
+                   <xs:element name="posizione" type="tipo_posizione" minOccurs="0" maxOccurs="unbounded"/>
+             </xs:sequence>
+          </xs:complexType>
+    </xs:element>
+</xs:schema>
+

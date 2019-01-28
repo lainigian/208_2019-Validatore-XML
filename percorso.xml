@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<percorso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <posizione>
+         <latitudine>
+             <gradi>43</gradi>
+             <minuti>33</minuti>
+             <secondi>43</secondi>
+             <orientamento>nord</orientamento>             
+         </latitudine>
+          <longitudine>
+             <gradi>10</gradi>
+             <minuti>19</minuti>
+             <secondi>0</secondi>
+             <orientamento>est</orientamento>             
+         </longitudine>  
+         <dataOra>2018-12-13T06:02:00</dataOra>
+    </posizione>
+    <posizione>
+         <latitudine>
+             <gradi>43</gradi>
+             <minuti>43</minuti>
+             <secondi>43</secondi>
+             <orientamento>nord</orientamento>             
+         </latitudine>
+          <longitudine>
+             <gradi>10</gradi>
+             <minuti>24</minuti>
+             <secondi>0</secondi>
+             <orientamento>est</orientamento>             
+         </longitudine>  
+         <dataOra>2018-12-13T06:32:00</dataOra>
+    </posizione>
+</percorso>
